@@ -16,7 +16,14 @@ android {
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-
+    signingConfigs {
+        getByName("debug") {
+            keyAlias = "androiddebugkey"
+            keyPassword = "android"
+            storeFile = file("./signingConfigs/debug.keystore")
+            storePassword = "android"
+        }
+    }
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -44,12 +51,15 @@ android {
 dependencies {
 
     implementation("androidx.activity:activity-compose:1.3.0-rc01")
+    implementation("androidx.activity:activity-ktx:1.3.0-rc01")
     implementation("androidx.appcompat:appcompat:1.3.0")
     implementation("androidx.compose.material:material:1.0.0-rc01")
     implementation("androidx.compose.ui:ui:1.0.0-rc01")
     implementation("androidx.compose.ui:ui-tooling:1.0.0-rc01")
     implementation("androidx.constraintlayout:constraintlayout:2.0.4")
     implementation("androidx.core:core-ktx:1.6.0")
+    implementation("com.google.android.gms:play-services-auth:19.0.0")
+    implementation("com.google.android.gms:play-services-fitness:20.0.0")
     implementation("com.google.android.material:material:1.4.0")
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.4.0")
