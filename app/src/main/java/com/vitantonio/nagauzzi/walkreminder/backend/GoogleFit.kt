@@ -1,4 +1,4 @@
-package com.vitantonio.nagauzzi.walkreminder.service
+package com.vitantonio.nagauzzi.walkreminder.backend
 
 import android.Manifest
 import android.content.Context
@@ -13,10 +13,8 @@ import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.common.api.ApiException
 import com.google.android.gms.fitness.FitnessOptions
 import com.google.android.gms.fitness.data.DataType
-
-const val LOG_TAG = "WalkReminder"
-const val PERMISSION_REQUEST_CODE = 3326
-const val GOOGLE_FIT_PACKAGE_NAME = "com.google.android.apps.fitness"
+import com.vitantonio.nagauzzi.walkreminder.GOOGLE_FIT_PACKAGE_NAME
+import com.vitantonio.nagauzzi.walkreminder.LOG_TAG
 
 val fitnessOptions: FitnessOptions
     get() = FitnessOptions.builder()

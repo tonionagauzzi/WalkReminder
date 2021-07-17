@@ -14,7 +14,7 @@ import androidx.compose.ui.tooling.preview.Preview
 import com.google.android.gms.auth.api.signin.GoogleSignIn
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount
 import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.vitantonio.nagauzzi.walkreminder.service.*
+import com.vitantonio.nagauzzi.walkreminder.backend.*
 import com.vitantonio.nagauzzi.walkreminder.ui.WalkReminderTheme
 
 class MainActivity : AppCompatActivity() {
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
             return
         }
 
-        // Get steps.
+        startTimer()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
